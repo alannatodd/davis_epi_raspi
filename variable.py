@@ -7,13 +7,15 @@ import os
 import datetime as dt
 import sys
 
+# Determine how long a video was requested and convert to seconds
 minutes = int(sys.argv[1])
 seconds = minutes * 5
 
-destination = '/code/fish/video'
+# Set file output destination within the code/ directory
+subdir = "fish"
 
+#### CAMERA SETUP ####
 camera = Picamera2()
-#video_config = camera.create_video_configuration()
 video_config = camera.create_video_configuration(main={"size":(480,480)}, lores={"size":(360,360)}, display="lores")
 camera.configure(video_config)
 
@@ -21,9 +23,8 @@ encoder = H264Encoder(10000000)
 camera.set_controls({"AfMode": controls.AfModeEnum.Continuous})
 
 def record_video():
-    output = FfmpegOutput(f"fish/{dt.datetime.now().strftime('%Y-%m-%d_%H.%M.%S')}_{minutes}min.mp4")
-    #output = FfmpegOutput(f"fish/{dt.datetime.now().strftime('%Y-%m-%d_%H.%M.%S.mp4')}")
-    camera.start_recording(encoder,output)
+    output = FfmpegOutput(f"{subdir}/{dt.datetime.now().strftime('%Y-%m-%d_%H.%M.%S')}_{minutes}min.mp4")
+    camera.start_recording(encoder, output)
     
     
 def finish_video():
@@ -31,5 +32,6 @@ def finish_video():
     
 record_video()
 
+# Sleep for length of video and then stop recording
 time.sleep(seconds)
 finish_video()
