@@ -1,14 +1,15 @@
-from picamera2 import Picamera2, Preview, MappedArray
+from datetime import datetime
 from libcamera import controls
-import time
+from picamera2 import Picamera2, Preview, MappedArray
 from picamera2.encoders import H264Encoder
 from picamera2.outputs import FfmpegOutput
+from threading import Thread
+
+import cv2
 import os
-from datetime import datetime
 import sys
 import shutil
-from threading import Thread
-import cv2
+import time
 
 #### NOTE: This file should be placed in the /code directory ####
 
