@@ -13,9 +13,9 @@ import cv2
 #### NOTE: This file should be placed in the /code directory ####
 
 #### PI / FILE STRUCTURE SETUP ####
-pi_username = os.getlogin() # ie, davis_epi_raspi1
-
 # Modify the following variables to match the individual pi's setup
+pi_username = "davis_epi_raspi1"
+
 # This subdirectory must exist under the /code directory
 subdir = "goats"
 # Verify the appearance of the drive's name when connected to the pi 
@@ -29,7 +29,7 @@ to_copy = []
 color = (0, 255, 0)
 origin = (0, 30)
 font = cv2.FONT_HERSHEY_SIMPLEX
-scale = 1
+scale = 0.75
 thickness = 2
 
 #### CAMERA SETUP ####
@@ -46,7 +46,7 @@ minutes = 20
 seconds = minutes * 60
 
 ## Uncomment to turn on continuous autofocus; Keep commented out to turn off autofocus
-#camera.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+camera.set_controls({"AfMode": controls.AfModeEnum.Continuous})
 
 # Create a file to store any logged errors
 error_file = f"{subdir}/errors_{datetime.now().strftime('%Y-%m-%d_%H.%M')}.txt"
@@ -90,7 +90,7 @@ camera.pre_callback = apply_timestamp
 while keep_running:
     try:
         # Start video recording
-        sd_file_path = f"{subdir}/{username}_{datetime.now().strftime('%Y-%m-%d_%H.%M.%S')}_{minutes}min.mp4"
+        sd_file_path = f"{subdir}/{pi_username}_{datetime.now().strftime('%Y-%m-%d_%H.%M.%S')}_{minutes}min.mp4"
         camera.start_and_record_video(sd_file_path, duration=seconds)
         to_copy.append(sd_file_path)
         
