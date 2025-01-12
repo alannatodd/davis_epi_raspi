@@ -45,7 +45,7 @@ keep_running = True
 minutes = 20
 seconds = minutes * 60
 
-## Uncomment to turn on continuous autofocus; Keep commented out to turn off autofocus
+## Uncomment to turn on continuous autofocus; comment out to turn off autofocus
 camera.set_controls({"AfMode": controls.AfModeEnum.Continuous})
 
 # Create a file to store any logged errors
