@@ -1,13 +1,14 @@
-from picamera2 import Picamera2, Preview
 from libcamera import controls
-import time
+from picamera2 import Picamera2, Preview
 from picamera2.encoders import H264Encoder
 from picamera2.outputs import FfmpegOutput
-import os
-import datetime as dt
-import sys
 
-# Determine how long a video was requested and convert to seconds
+import datetime as dt
+import os
+import sys
+import time
+
+# Determine how long of a video was requested and convert to seconds
 minutes = int(sys.argv[1])
 seconds = minutes * 5
 
@@ -29,7 +30,8 @@ def record_video():
     
 def finish_video():
     camera.stop_recording()
-    
+
+
 record_video()
 
 # Sleep for length of video and then stop recording
