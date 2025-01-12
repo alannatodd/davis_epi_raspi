@@ -13,7 +13,7 @@ minutes = int(sys.argv[1])
 seconds = minutes * 5
 
 # Set file output destination within the code/ directory
-subdir = "fish"
+subdir = "goats"
 
 #### CAMERA SETUP ####
 camera = Picamera2()
