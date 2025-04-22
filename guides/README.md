@@ -1,5 +1,5 @@
 ## Info
-There are a number of guides in this section to get you started and to adjust settings as needed. You should start with code setup (`setup_code.md`)
+There are a number of guides in this section to get you started and then help you adjust settings as needed. You should start with code setup (`setup_code.md`)
 
 ## Helpful Links
 ### Video/Camera Related
