@@ -58,7 +58,7 @@
      camera.set_controls({"AfMode": controls.AfModeEnum.Manual, "LensPosition": 0.5})
      ```
 8. Click save at the top of the editor
-   <img src="screenshots/geanny_save.png">
+   <img src="screenshots/geany_save.png">
 9. In the terminal, move to the code directory by running
    ```
    cd code
@@ -79,6 +79,6 @@
      camera.set_controls({"AfMode": controls.AfModeEnum.Manual, "LensPosition": 0.5})
      ```
 13. Click save at the top of the editor
-    <img src="screenshots/geanny_save.png">
+    <img src="screenshots/geany_save.png">
 14. Restart the pi so that continuous.py will start running again with the new focus and lens position settings. In the terminal, type `reboot` and press enter
     <img src="screenshots/reboot.png">
