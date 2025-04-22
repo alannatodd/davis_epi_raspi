@@ -1,6 +1,9 @@
-If you want to rename the existing main user. In this example we are changing the name of the user from `fishpi13` to `davis_epi_raspi13`
+If you want to rename the existing main user. In this example we are changing the name of the user from `fishpi18` to `davis_epi_raspi18`
 
 1. Open terminal
+
+   <img src="screenshots/terminal.png">
+   
 2. Create a temporary user
    ```
    $ sudo adduser temppi
@@ -8,10 +11,16 @@ If you want to rename the existing main user. In this example we are changing th
    Note: You may be prompted to put in your password here
    Note: You can put 'temppi' for the name and press enter to leave everything else blank
    Note: You will not be able to see the password that you type (it will seem like you haven't typed anything)
+
+   <img src="screenshots/create_temppi_user.png">
+   
 4. Assign the user to the `sudo` group so it has permission to manipulate other users
    ```
    $ sudo usermod -aG sudo temppi
    ```
+
+   <img src="screenshots/usermod_temppi.png">
+   
 5. Make sure auto-login is disabled in the raspi config
    - This is also a good opportunity to change the password of the main user if desired
 6. Reboot the pi. This can either be done from the menu or by typing `reboot` in the terminal and hitting enter
@@ -23,24 +32,46 @@ If you want to rename the existing main user. In this example we are changing th
    ```
    ex:
    ```
-   $ sudo usermod -l davis_epi_raspi13 -m -d /home/davis_epi_raspi13 fishpi13
+   $ sudo usermod -l davis_epi_raspi18 -m -d /home/davis_epi_raspi18 fishpi18
    ```
-10. Update references to the old username
+
+   <img src="screenshots/user_to_sudo_group.png">
+   
+10. Update references to the old username (see screenshot above)
    ```
-   sudo grep -rl 'fishpi13' /etc /home/davis_epi_raspi13
+   sudo grep -rl 'fishpi18' /etc /home/davis_epi_raspi18
    ```
-11. Reboot
-12. Log in to new user (in example davis_epi_raspi13)
+11. Reboot - type `reboot` in terminal and hit enter
+
+    <img src="screenshots/reboot.png">
+    
+12. Log in to new user (in example davis_epi_raspi18)
 13. Open terminal
 14. Delete temporary user
     ```
     sudo deluser --remove-home temppi
     ```
-15. IN raspi config, re-enable auto-login
+    
+15. In raspi config (pi dropdown in menu bar, config), re-enable auto-login
+
+    <img src="screenshots/raspi_config_options.png">
+    
 16. Update the cron file to point to the new user
     ```
     sudo crontab -e
     ```
-    Edit the line at the bottom that mentions `launcher.sh` to use the new username instead of the old one
-17. Save crontab `esc` , `:wq`, `Enter`
+    <img src="screenshots/crontab_term.png">
     
+    Edit the line at the bottom that mentions `launcher.sh` to use the new username instead of the old one
+
+    Before edits:
+
+    <img src="screenshots/crontab_file.png">
+
+    After edits:
+
+    <img src="screenshots/crontab_edited.png">
+    
+18. Save crontab by hitting `esc` , typing `:wq`, then pressing `Enter`
+
+    <img src="screenshots/crontab_save.png">
