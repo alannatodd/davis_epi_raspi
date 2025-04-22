@@ -4,7 +4,7 @@
 ### Supplies needed per Pi (From scratch)
 -	[Raspberry Pi 4 Model B + power cable](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 -	[Raspberry Pi case with fan + connection accessories](https://vilros.com/products/vilros-accessories-starter-pack-for-raspberry-pi-4-includes-fan-cooled-case-power-supply-heatsink-set-of-4-micro-hdmi-usb-c-adapters)
--	Wide angle camera in [regular]([https://vilros.com/products/raspberry-pi-camera-3](https://vilros.com/products/raspberry-pi-camera-3?variant=39984853155934) or [noir (infrared for night video)]([https://vilros.com/products/raspberry-pi-camera-3](https://vilros.com/products/raspberry-pi-camera-3?variant=39984853221470))
+-	Wide angle camera in [regular](https://vilros.com/products/raspberry-pi-camera-3?variant=39984853155934) or [noir (infrared for night video)](https://vilros.com/products/raspberry-pi-camera-3?variant=39984853221470)
 -	microSD card (large storage size: 256 GB - 1 TB+)
 -	USB drive (large storage size: 256 GB - 1 TB+)
 -	Carabiner
