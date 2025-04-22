@@ -30,7 +30,7 @@
 
    <img src="screenshots/stop_process.png">
    
-5. From the terminal run `libcamera` to see a preview window to determine what lens position to use. This will likely be in a range between 0.1 and 10. You can also determine what image dimensions to use, such as 360 x 360 or 360 x 480.
+5. From the terminal run `libcamera-vid` to see a preview window to determine what lens position to use. This will likely be in a range between 0.1 and 10. You can also determine what image dimensions to use, such as 360 x 360 or 360 x 480.
    - For a high mounted camera, try:
    ```
    libcamera-vid --height 360 --width 360 --timeout 100000 --lens-position 0.5
