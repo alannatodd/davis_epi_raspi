@@ -57,6 +57,9 @@
      ```
      camera.set_controls({"AfMode": controls.AfModeEnum.Manual, "LensPosition": 0.5})
      ```
+
+   <img src="screenshots/continuous_py_focus.png">
+     
 8. Click save at the top of the editor
    <img src="screenshots/geany_save.png">
 9. In the terminal, move to the code directory by running
