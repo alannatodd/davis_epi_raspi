@@ -28,7 +28,7 @@
 -	Small folding table or tv-dinner stand to put the monitor + keyboard + mouse on in the field
 
 ## Setup
-## From Scratch 
+### From Scratch 
 1.	Download raspberry pi image from website (which image?); link
 2.	Download raspberry pi formatter? 
 3.	Insert unformatted SD card into laptop either directly or via SD card reader adapter 
@@ -56,7 +56,7 @@
 25.	Add launcher.sh to crontab 
 26.	Proceed to in the field setup 
 
-## In the field setup – per pi 
+### In the field setup – per pi 
 1.	Connect pi to monitor, keyboard, mouse, power. Connect monitor to power. 
 2.	Power on the pi 
 3.	Open terminal and find running python process - kill
