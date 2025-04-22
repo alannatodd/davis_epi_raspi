@@ -81,4 +81,5 @@
 13. Click save at the top of the editor
     <img src="screenshots/geany_save.png">
 14. Restart the pi so that continuous.py will start running again with the new focus and lens position settings. In the terminal, type `reboot` and press enter
+
     <img src="screenshots/reboot.png">
