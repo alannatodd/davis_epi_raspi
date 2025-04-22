@@ -8,3 +8,4 @@ There are a number of guides in this section to get you started and then help yo
 
 ### General Programming Related
 - [Using the 'terminal' or 'command line'](https://www.freecodecamp.org/news/command-line-for-beginners/)
+- [A multitude of beginner python tutorials](https://wiki.python.org/moin/BeginnersGuide/Programmers)
