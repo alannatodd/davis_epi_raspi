@@ -1,4 +1,4 @@
-# Davis Epi Lab Raspberry Pi Setup 
+# Raspberry Pi Setup 
 
 ## Supplies
 ### Supplies needed per Pi (From scratch)
