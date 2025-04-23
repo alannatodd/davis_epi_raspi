@@ -4,6 +4,7 @@ The code is configured to use a USB called `DUAL DRIVE`. If you wish to use a di
 2. Rename the USB to be `DUAL DRIVE`, which will be covered in this guide
 
 ## Rename Process using mlabel
+**Note**: This may not work on its own for all USBs - in which case, you will need to do the **Rename process using gparted** below this
 Using a Raspberry Pi:
 1. Plug in the USB you want to rename
 2. Open terminal
@@ -30,3 +31,19 @@ Using a Raspberry Pi:
 10. Then type `ls` (note this is a lowercase L, not an I)
 11. If the rename worked, it should say 'DUAL DRIVE'
 12. Again eject and remove USB 
+
+## Rename Process Using gparted
+If using a new pi, will need to install gparted, otherwise if using same Pi as before can skip step 1
+1. Open terminal and type `sudo apt install gparted` and press enter.
+
+2. You may be prompted to enter the password for `sudo`. Type password and hit enter (note: it will not look like you have typed anything for the password, but it's there)
+3. Plug in the USB you want to rename to the Pi
+4. Open gparted - from top menu click raspberry icon, then system tools, then gparted. Enter same password you use elsewhere (sudo, login)
+5. In gparted, there should be a drop down towards the top right- select `/dev/sda` from the drop down and you should see the USB listed 
+6. Go back to terminal and unmount USB. Type `sudo umount /media/` (then press tab to autocomplete - should be usb path). You might also be able to unmount the USB in gparted if you right click on the listed USB - might be an unmount option 
+7. In gparted, right click on USB and select format -> fat32
+8. Select accept / apply on any warnings. It should now say 1 pending operation at the bottom. 
+9. In gparted go to edit in top menu -> apply operations
+10. Accept any warnings and let it reformat the USB
+11. When done reformatting, unplug the USB from the Pi and close gparted, then plug back in 
+12. Follow steps 5-8 from the `mlabel` instructions above
