@@ -25,7 +25,7 @@
 -	Power strip(s) 
 -	Extension cord(s)
 -	Hotspot-enabled smartphone
--	Small folding table or tv-dinner stand to put the monitor + keyboard + mouse on in the field
+-	Recommended: Small folding table or tv-dinner stand to put the monitor + keyboard + mouse on in the field
 
 ## Setup
 ### From Scratch 
