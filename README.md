@@ -4,7 +4,8 @@
 ### Syncing Time
 ### Adjusting Camera Focus + Video Size
 ### Changing Name of Pi User
-### Using LEDs for Time Information
+### [Using LEDs for Time Information](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_led.md)
+### [Renaming USB](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/rename_usb.md)
 
 ## Expansion/Improvement Opportunities
 ### Hardware Clock 
