@@ -21,12 +21,15 @@ If you want to rename the existing main user. In this example we are changing th
 
    <img src="screenshots/usermod_temppi.png">
    
-5. Make sure auto-login is disabled in the raspi config
+5. Make sure auto-login is disabled in the raspi config using toggle (raspberry icon in menu, select config). Make sure to save!
    - This is also a good opportunity to change the password of the main user if desired
-6. Reboot the pi. This can either be done from the menu or by typing `reboot` in the terminal and hitting enter
-7. When the pi reboots, log in to the temporary user 
-8. Open the terminal
-9. Rename the main user
+
+   <img src="screenshots/raspi_config_options.png">
+   
+7. Reboot the Pi. This can either be done from the menu or by typing `reboot` in the terminal and hitting enter
+8. When the Pi reboots, log in to the temporary user (`temppi`)
+9. Open the terminal
+10. Rename the main user
    ```
    $ sudo usermod -l new_username -m -d /home/new_username old_username
    ```
@@ -37,7 +40,7 @@ If you want to rename the existing main user. In this example we are changing th
 
    <img src="screenshots/user_to_sudo_group.png">
    
-10. Update references to the old username (see screenshot above)
+11. Update references to the old username (see screenshot above)
    ```
    sudo grep -rl 'fishpi18' /etc /home/davis_epi_raspi18
    ```
@@ -45,14 +48,14 @@ If you want to rename the existing main user. In this example we are changing th
 
     <img src="screenshots/reboot.png">
     
-12. Log in to new user (in example davis_epi_raspi18)
+12. Log in to new user (in this example davis_epi_raspi18)
 13. Open terminal
 14. Delete temporary user
     ```
     sudo deluser --remove-home temppi
     ```
     
-15. In raspi config (pi dropdown in menu bar, config), re-enable auto-login
+15. In raspi config (raspberry icon dropdown in menu bar, select config), re-enable auto-login using toggle. Make sure to save!
 
     <img src="screenshots/raspi_config_options.png">
     
