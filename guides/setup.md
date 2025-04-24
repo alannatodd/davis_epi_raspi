@@ -66,31 +66,39 @@
       - `variable.py`
    - Steps:
       - Download zip file of code repo
+        
         <img src=screenshots/download_zip.png>
+        
       - Move the zip file from Downloads to the `/code` directory. In the terminal type: `mv Downloads/davis_epi_raspi-main.zip code/`,
       - Move to code directory: `cd code` 
       - Unzip the repo file into the code directory: `unzip davis_epi_raspi-main.zip`
       - Then move the files from the repo folder up a level to the code directory: `mv -v davis_epi_raspi-main/* .`
+        
         <img src=screenshots/move_unzip_repo.png>
+        
       - Remove the zip file and davis_epi_raspi-main folder: `rm -rf davis_epi_raspi-main` and `rm davis_epi_raspi-main.zip`
+        
         <img src=screenshots/rm_davis_folders.png>
+        
 18. Determine name of USB drive – check by typing `ls /media/<username>/` in terminal (ie `ls /media/davis_epi_raspi14`) It should be 'DUAL DRIVE' if using USBs from previous projects - if not see `rename_usb.md`
 
-   <img src=screenshots/ls_usb.png>
+    <img src=screenshots/ls_usb.png>
 
 19. Make sure Raspberry Pi config is correct
     - Select raspberry icon in menu bar -> Preferences -> Raspberry Pi Configuration
     
-    <img src=screenshots/raspi_config_toggles.png>
+      <img src=screenshots/raspi_config_toggles.png>
 
-    You can also change keyboard settings, password, and auto-login from here
+      You can also change keyboard settings, password, and auto-login from here
 
-    <img src=screenshots/raspi_config_keyboard.png>
-    <img src=screenshots/raspi_config_settings.png>
+      <img src=screenshots/raspi_config_keyboard.png>
+      <img src=screenshots/raspi_config_settings.png>
     
 20. Add `launcher.sh` to crontab
     - Type `crontab -e` in terminal and press enter
-    <img src=screenshots/crontab_edit.png>
+      
+      <img src=screenshots/crontab_edited.png>
+    
 21. Proceed to 'in the field setup' instructions below
 
 ### In the field setup – per Pi 
