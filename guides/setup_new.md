@@ -80,5 +80,5 @@
 
     <img src="screenshots/reboot.png">
 
-22. Make sure the video process is running. Reference steps 1-2 [here](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
+22. Make sure the video process is running. Reference steps 1-2 [here](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md). You can also look in your subdirectory under the code directory (ie, 'code/goats') to see if there are video files appearing. They should be prefixed with the username of the Pi and end in `20min.mp4` (ex: `davis_epi_raspi17_2025-04-23_19.57.25_20min.mp4`)
 24. If it's working, your Pi is ready - you can shut it off and proceed to 'In-Field Setup' instructions
