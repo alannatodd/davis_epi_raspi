@@ -51,7 +51,7 @@
         
         <img src=screenshots/rm_davis_folders.png>
         
-18. Update variables `launcher.sh`, `continuous.py`, and `variable.py` to work with this specific Pi + username [Guide]()
+18. Update variables `launcher.sh`, `continuous.py`, and `variable.py` to work with this specific Pi + username [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/code_customization.md)
 19. Determine name of USB drive – check by typing `ls /media/<username>/` in terminal (ie `ls /media/davis_epi_raspi14`) It should be 'DUAL DRIVE' if using USBs from previous projects - if not see `rename_usb.md`
 
     <img src=screenshots/ls_usb.png>
@@ -80,5 +80,5 @@
 
     <img src="screenshots/reboot.png">
 
-22. Make sure the video process is running. Reference steps 1-2 [here]()
+22. Make sure the video process is running. Reference steps 1-2 [here](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
 24. If it's working, your Pi is ready - you can shut it off and proceed to 'In-Field Setup' instructions
