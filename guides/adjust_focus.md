@@ -1,4 +1,7 @@
-## Adjust Camera Settings (Autofocus, Lens Distance, Picture Dimensions)
+# Adjusting Camera Settings (Autofocus, Lens Distance, Picture Dimensions)
+Depending on your setup, you will likely need to make some adjustments in the field to capture the best picture quality depending on factors like distance from the subject and movement.
+
+## Process
 1. Kill running `continous.py` process if it exists: [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
    
 2. From the terminal run `libcamera-vid` to see a preview window to determine what lens position to use. This will likely be in a range between 0.1 and 10. You can also determine what image dimensions to use, such as 360 x 360 or 360 x 480.
@@ -69,6 +72,6 @@
 
     <img src="screenshots/geany_save.png">
     
-10. Restart the pi so that continuous.py will start running again with the new focus and lens position settings. In the terminal, type `reboot` and press enter
+10. Restart the Pi so that continuous.py will start running again with the new focus and lens position settings. In the terminal, type `reboot` and press enter
 
     <img src="screenshots/reboot.png">
