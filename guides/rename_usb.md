@@ -46,4 +46,4 @@ If using a new pi, will need to install gparted, otherwise if using same Pi as b
 9. In gparted go to edit in top menu -> apply operations
 10. Accept any warnings and let it reformat the USB
 11. When done reformatting, unplug the USB from the Pi and close gparted, then plug back in 
-12. Follow steps 5-8 from the `mlabel` instructions above
+12. Follow steps 5-12 from the `mlabel` instructions above
