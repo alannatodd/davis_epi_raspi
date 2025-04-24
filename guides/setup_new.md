@@ -80,5 +80,5 @@
 
     <img src="screenshots/reboot.png">
 
-22. Make sure the video process is running
-23. If it's working, you can proceed to 'In-Field Setup' instructions
+22. Make sure the video process is running. Reference steps 1-2 [here]()
+24. If it's working, your Pi is ready - you can shut it off and proceed to 'In-Field Setup' instructions
