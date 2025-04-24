@@ -18,12 +18,16 @@ This repository contains the code and guidance to use Raspberry Pis for recordin
 - If a USB is not plugged in before and up to when the Pi is shut down, the videos recorded during that time will not be automatically transferred to a USB during any following sessions. However, the videos can be moved manually by connecting a monitor/keyboard/mouse to the Pi.
 
 ## Guides
-### Setup
-### Syncing Time
-### Adjusting Camera Focus + Video Size
-### Changing Name of Pi User
-### [Using LEDs for Time Information](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_led.md)
-### [Renaming USB](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/rename_usb.md)
+### [Required Supplies](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/supplies.md)
+### [Setup New Pis](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_new.md)
+### [Setup Pis in the Field](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_in_field.md)
+### [Finding & Killing Python Processes](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
+### [Customizing the Code in this Repo](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/code_customization.md)
+### [Syncing Time](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/syncing_time.md)
+### [Adjusting Camera Focus + Video Size](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/adjust_focus.md)
+### [Changing Name of Pi User](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/change_user.md)
+### [Using LEDs for Time + Error Information](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_led.md)
+### [Renaming USBs](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/rename_usb.md)
 
 ## Expansion/Improvement Opportunities
 ### Hardware Clock 
