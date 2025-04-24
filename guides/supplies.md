@@ -7,14 +7,15 @@
 -	USB drive (large storage size: 256 GB - 1 TB+)
 -	Carabiner (depending on setup)
 -	Lanyard
--	Tape (painters & electrical)
 
-## Supplies needed per pi (Pre-existing setup)
+## Supplies needed per Pi (Pre-existing setup)
 -	Raspberry Pi (in case) + power cable
--	Laptop
--	Laptop / Tablet to offload videos
+-	LED [optional]
+-	Infrared Spotlight (If recording at night)
 
 ## Supplies needed (General) 
+-	Laptop
+-	Laptop / Tablet to offload videos
 -	Portable monitor + power cable
     * HDMI to miniHDMI cable (depending on portable monitor)
     * microHDMI to HDMI adapter
@@ -22,5 +23,6 @@
 -	Computer Keyboard (with USB cable or USB Bluetooth adapter)
 -	Power strip(s) 
 -	Extension cord(s)
+-	Tape (painters & electrical)
 -	Hotspot-enabled smartphone
 -	Recommended: Small folding table or tv-dinner stand to put the monitor + keyboard + mouse on in the field
