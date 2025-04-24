@@ -1,6 +1,6 @@
 # Davis EPI Lab Raspberry Pi Setup 
 ## Info
-There are a number of guides in this section to get you started and then help you adjust settings as needed. You should start with code setup (`setup_code.md`) for pis that have already been generally setup, else from scratch use `setup_from_scratch.md`.
+There are a number of guides in this section to get you started and then help you adjust settings as needed. You should start with [in-the-field setup](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_in_field.md) for Pis that have already been generally setup, else use [from scratch setup ](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/setup_new.md).
 
 ## Helpful Links
 ### Video/Camera Related
