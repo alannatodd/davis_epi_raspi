@@ -210,7 +210,7 @@ except Exception as e:
 try:
     # Turnon LED for 5 seconds to indicate program has started successfully
     led_print(5, 1, 2)
-    #led_print_datetime()
+    led_print_datetime()
 except Exception as e:
     print(f"Error w printing datetime: {e}")
     led_print_error_indicator()
