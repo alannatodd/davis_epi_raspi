@@ -1,3 +1,7 @@
+# Renaming the Main User 
+Note: This is unlikely to be necessary at any point, but I have included it in case it ends up being needed. I had to go through it to rename all the Pis to a more general username.
+
+## Process
 If you want to rename the existing main user. In this example we are changing the name of the user from `fishpi18` to `davis_epi_raspi18`
 
 1. Open terminal
@@ -59,13 +63,13 @@ If you want to rename the existing main user. In this example we are changing th
 
     <img src="screenshots/raspi_config_options.png">
     
-16. Update the cron file to point to the new user
+16. Update the crontab file to point to the new user path
     ```
     sudo crontab -e
     ```
     <img src="screenshots/crontab_term.png">
     
-    Edit the line at the bottom that mentions `launcher.sh` to use the new username instead of the old one
+    Edit the line at the bottom that mentions `launcher.sh` to use the new username instead of the old one. Press `i` to start editing. Navigate through the line using the arrow keys. 
 
     Before edits:
 
@@ -78,3 +82,5 @@ If you want to rename the existing main user. In this example we are changing th
 18. Save crontab by hitting `esc` , typing `:wq`, then pressing `Enter`
 
     <img src="screenshots/crontab_save.png">
+
+19. The process should now be re-setup correctly and run as expected.
