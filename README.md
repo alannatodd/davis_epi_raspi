@@ -46,4 +46,4 @@ Currently, shutting off the Raspberry Pis will not gracefully terminate the runn
 It might be possible to make code changes that would cause the program to automatically transfer _any_ previously recorded videos onto the Pi when a USB is plugged in, instead of just ones from that session. Another consideration would be running a separate process at the same time as `continuous.py` that is responsible for transferring videos.
 
 ### Supporting Multiple USB Names 
-Making code updates to `continuous.py` to search for multiple names of USBs. This would prevent needing to rename USBs to a single name, but would require user to update the `continuous.py` file to add new USBs to the list of possible names. 
+Making code updates to `continuous.py` to search for multiple names of USBs. This would prevent needing to rename USBs to a single name, but would require user to update the `continuous.py` file on each Pi to add new USBs to the list of possible names. 
