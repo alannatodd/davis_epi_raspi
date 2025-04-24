@@ -105,15 +105,18 @@
 
 21. Check that video works using `variable.py`
 21. Reboot the Pi: type `reboot` in terminal and press enter
+
+    <img src="screenshots/reboot.png">
+
 22. Make sure the video process is running
 23. If it's working, you can proceed to 'in the field setup' instructions below
 
 ### In the field setup – per Pi 
 1.	Connect pi to monitor, keyboard, mouse, power. Connect monitor to power. [(guide)](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6)
 2.	Power on the Pi 
-3.	Open terminal and find running python process - kill
-4.	Use `variable.py`, `libcamera-vid`, or `libcv` to test and adjust video settings - height, autofocus, infrared etc (see `adjust_focus.md`)
-5.	Connect to hotspot or WiFi to update date + time so timestamps will be accurate (see `syncing_time.md`)
+3.	Open terminal and find running `continuous.py` python process and kill it [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
+4.	Use `variable.py`, `libcamera-vid`, or `libcv` to test and adjust video settings - height, autofocus, infrared etc [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/adjust_focus.md)
+5.	Connect to hotspot or WiFi to update date + time so timestamps will be accurate [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/syncing_time.md)
 6.	Disconnect from hotspot/WiFi if prohibited during experiment
 7.	Update `continuous.py` with preferred settings
 8.	Run `reboot` in terminal and disconnect mouse + monitor
