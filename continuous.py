@@ -252,8 +252,9 @@ try:
     minutes = 20
     seconds = minutes * 60
 
-    ## Uncomment to turn on continuous autofocus; comment out to turn off autofocus
-    camera.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+    ## Uncomment/comment lines below to turn on/off continuous autofocus and set lens position
+    # camera.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+    camera.set_controls({"AfMode": controls.AfModeEnum.Manual, "LensPosition": 0.5})
     
     camera.pre_callback = apply_timestamp
     
