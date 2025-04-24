@@ -43,6 +43,9 @@ Open the file in a code editor. Here you only need to change a single item - the
 
 ## Optional 
 
+### Editing `variable.py` 
+If you want to use `variable.py` for testing, you will need to edit the path for the videos to match the username and subdirectory you have chosen.
+
 ### Turning off the LED integration
 If you don't have an LED connected to the Pi, or do not wish to enable the LED functions, you can disable it here by setting the value to `False`:
 
@@ -53,4 +56,4 @@ The video duration, video dimensions, and focus settings can be adjusted here:
 
 <img src=screenshots/geany_video_settings.png>
 
-See [Adjusting Focus Guide]() for more information 
+See [Adjusting Focus Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/adjust_focus.md) for more information 
