@@ -6,10 +6,12 @@ This repository contains the code and guidance to use Raspberry Pis for recordin
 1. The Pis are loaded with two important files that work together to run the video program: `launcher.sh` and `continuous.py`
 2. The `crontab` file on the Pi is edited to run the `launcher.sh` script on reboot of the Pi. From the [Linux man page](https://man7.org/linux/man-pages/man5/crontab.5.html):
    > A crontab file contains instructions for the cron(8) daemon in the following simplified manner: "run this command at this time on this date".
-  In addition to running at set times, there is also an option to run on reboot, which is what is used in this setup
-3. The `launcher.sh` script launches the python process defined by `continuous.py`. This process records video and transfers it to the USB
-4. If no USB is plugged in, `continuous.py` keeps a running list of the videos it has recorded during this run of the process that have not been transferred yet. Each time a video finishes, the program launches a thread to A) Check is a USB is plugged in and B) If so, transfer any videos to the USB that are in the not-yet-transferred list
-5. The `continuous.py` process can be terminated in 2 ways: Turning off the Pi, or manually killing the process when connected to the Pi with a monitor/mouse/keyboard as defined in some of the Guides.
+   
+   In addition to running at set times, there is also an option to run on reboot, which is what is used in this setup
+   
+4. The `launcher.sh` script launches the python process defined by `continuous.py`. This process records video and transfers it to the USB
+5. If no USB is plugged in, `continuous.py` keeps a running list of the videos it has recorded during this run of the process that have not been transferred yet. Each time a video finishes, the program launches a thread to A) Check is a USB is plugged in and B) If so, transfer any videos to the USB that are in the not-yet-transferred list
+6. The `continuous.py` process can be terminated in 2 ways: Turning off the Pi, or manually killing the process when connected to the Pi with a monitor/mouse/keyboard as defined in some of the Guides.
 
 **Notes**
 - When the Pi is turned off, the program running that records video will be un-gracefully shut down. This means that whatever video was in progress will not be properly saved or moved to the USB. It is recommended to only shut down the Pi at least 20 minutes past the required end of recording to ensure everything needed has been captured and transferred to the USB. You should also make sure that a USB has been plugged into the Pi for awhile before shutdown, so that all videos from that session had a chance to be transferred.
