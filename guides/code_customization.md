@@ -25,25 +25,26 @@ Prereqs:
 ### Update `continuous.py` 
 Open the file in a code editor. You will need to update a few variables in the copy of the `continuous.py` _on the Pi_: 
 - `pi_username`: must be set to the username on the Pi you are currently working on. If you open a terminal window this username will be shown in the line prefix.
-- `subdir` (only if using different directory under `/code` than what is set)
-- `usb_name` (only if USB is not named this)
+- `subdir`: only if using different directory under `/code` than what is set
+- `usb_name`: only if USB is not named this
+  
 You can look at these variables in this repo [here](https://github.com/alannatodd/davis_epi_raspi/blob/02ea7123ba0473a3676f347ce3bb9aa87a5150d7/continuous_led.py#L17) but they need to be edited in the file on the Pi itself.
 
 Example of how this will look in Geany: 
 
-<img src=screenshots/geany_vars.py>
+<img src=screenshots/geany_vars.png>
 
 Make any needed edits and then save the file.
 
 ### Update `launcher.sh` 
-Open the file in a code editor. Here you only need to change a single item - the path - it should (like in `continuous.py`) be updated with the username for the Pi you are currently working on.
+Open the file in a code editor. Here you only need to change a single item - the path after `cd` - it should (like in `continuous.py`) be updated with the username for the Pi you are currently working on. Update it, then save the file.
 
 <img src=screenshots/geany_launcher.png>
 
 ## Optional 
 
 ### Turning off the LED integration
-If you don't have an LED connected to the Pi, or do not wish to enable the LED functions, you can disable it here by setting the value to False:
+If you don't have an LED connected to the Pi, or do not wish to enable the LED functions, you can disable it here by setting the value to `False`:
 
 <img src=screenshots/geany_led.png>
 
