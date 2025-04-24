@@ -1,34 +1,5 @@
-# Raspberry Pi Setup 
-
-## Supplies
-### Supplies needed per Pi (From scratch)
--	[Raspberry Pi 4 Model B + power cable](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
--	[Raspberry Pi case with fan + connection accessories](https://vilros.com/products/vilros-accessories-starter-pack-for-raspberry-pi-4-includes-fan-cooled-case-power-supply-heatsink-set-of-4-micro-hdmi-usb-c-adapters)
--	Wide angle camera in [regular](https://vilros.com/products/raspberry-pi-camera-3?variant=39984853155934) or [noir (infrared for night video)](https://vilros.com/products/raspberry-pi-camera-3?variant=39984853221470)
--	microSD card (large storage size: 256 GB - 1 TB+)
--	USB drive (large storage size: 256 GB - 1 TB+)
--	Carabiner (depending on setup)
--	Lanyard
--	Tape (painters & electrical)
-
-### Supplies needed per pi (Pre-existing setup)
--	Raspberry Pi (in case) + power cable
--	Laptop
--	Laptop / Tablet to offload videos
-
-### Supplies needed (General) 
--	Portable monitor + power cable
-    * HDMI to miniHDMI cable (depending on portable monitor)
-    * microHDMI to HDMI adapter
--	Computer mouse (with USB cable or USB Bluetooth adapter)
--	Computer Keyboard (with USB cable or USB Bluetooth adapter)
--	Power strip(s) 
--	Extension cord(s)
--	Hotspot-enabled smartphone
--	Recommended: Small folding table or tv-dinner stand to put the monitor + keyboard + mouse on in the field
-
+# Raspberry Pi Setup (New Pi)
 ## Setup
-### From Scratch 
 1.	Install a Rasberry Pi Operating System (OS) onto the SD Card [(comprehensive guide)](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system)
    - Download [Raspberry Pi Imager](https://www.raspberrypi.com/software/) on laptop
    - Insert unformatted SD card into laptop either directly or via SD card reader adapter
@@ -76,15 +47,16 @@
         
         <img src=screenshots/move_unzip_repo.png>
         
-      - Remove the zip file and davis_epi_raspi-main folder: `rm -rf davis_epi_raspi-main` and `rm davis_epi_raspi-main.zip`
+      - Optional: Remove the zip file and davis_epi_raspi-main folder: `rm -rf davis_epi_raspi-main` and `rm davis_epi_raspi-main.zip`
         
         <img src=screenshots/rm_davis_folders.png>
         
-18. Determine name of USB drive – check by typing `ls /media/<username>/` in terminal (ie `ls /media/davis_epi_raspi14`) It should be 'DUAL DRIVE' if using USBs from previous projects - if not see `rename_usb.md`
+18. Update variables `launcher.sh`, `continuous.py`, and `variable.py` to work with this specific Pi + username [Guide]()
+19. Determine name of USB drive – check by typing `ls /media/<username>/` in terminal (ie `ls /media/davis_epi_raspi14`) It should be 'DUAL DRIVE' if using USBs from previous projects - if not see `rename_usb.md`
 
     <img src=screenshots/ls_usb.png>
 
-19. Make sure Raspberry Pi config is correct
+20. Make sure Raspberry Pi config is correct
     - Select raspberry icon in menu bar -> Preferences -> Raspberry Pi Configuration
     
       <img src=screenshots/raspi_config_toggles.png>
@@ -94,7 +66,7 @@
       <img src=screenshots/raspi_config_keyboard.png>
       <img src=screenshots/raspi_config_settings.png>
     
-20. Add `launcher.sh` to crontab
+21. Add `launcher.sh` to crontab
     - Type `sudo crontab -e` in terminal and press enter (you may need to enter password)
 
       <img src=screenshots/crontab_term.png>
@@ -103,23 +75,10 @@
 
       <img src=screenshots/crontab_edited.png>
 
-21. Check that video works using `variable.py`
+22. Check that video works using `variable.py`
 21. Reboot the Pi: type `reboot` in terminal and press enter
 
     <img src="screenshots/reboot.png">
 
 22. Make sure the video process is running
-23. If it's working, you can proceed to 'in the field setup' instructions below
-
-### In the field setup – per Pi 
-1.	Connect pi to monitor, keyboard, mouse, power. Connect monitor to power. [(guide)](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6)
-2.	Power on the Pi 
-3.	Open terminal and find running `continuous.py` python process and kill it [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
-4.	Use `variable.py`, `libcamera-vid`, or `libcv` to test and adjust video settings - height, autofocus, infrared etc [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/adjust_focus.md)
-5.	Connect to hotspot or WiFi to update date + time so timestamps will be accurate [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/syncing_time.md)
-6.	Disconnect from hotspot/WiFi if prohibited during experiment
-7.	Update `continuous.py` with preferred settings
-8.	Run `reboot` in terminal and disconnect mouse + monitor
-9.	After 20+ minutes, you can remove usb to check that videos are recording properly
-
-Unless changed, the Pi will record 20 minute long videos. Every time a recording is finished, the python process will check if there a USB connected to the Pi in the expected location with the expected name. If so, it will copy the video (and any other videos that have yet to be copied) to the USB drive and then delete it from the pi. If there is no USB connected to the Pi when the recording ends, the video file will be added to a list of files to be copied once a USB is connected. 
+23. If it's working, you can proceed to 'In-Field Setup' instructions
