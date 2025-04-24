@@ -35,8 +35,8 @@
    - Load an OS onto the SD card using the Raspberry Pi Imager [(alt guide)](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/4)
       - Note: The current Pis are running a 64-bit port of Debian Bullseye. To find this option in the Imager, after clicking OS you must click Raspberry Pi OS (other). It appears as "Raspberry Pi OS (Legacy, 64-bit)". Either the full or regular should be fine, just don't use the lite version since you will need a Desktop. You can also try using the Bookworm port, but I cannot guarantee everything will look or work the same as in this guide.
       
-      <img src=screenshots/raspi_os_other.png>
-      <img src=screenshots/raspi_os_options.png>
+        <img src=screenshots/raspi_os_other.png>
+        <img src=screenshots/raspi_os_options.png>
       
 2.	Insert SD card into Raspberry Pi (see end of guide above or [here](https://www.raspberrypi.com/documentation/computers/getting-started.html#set-up-your-raspberry-pi))
 3.	Connect camera to Raspberry Pi [(guide pt 1)](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/1) [(guide pt2)](https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/2)
@@ -95,11 +95,18 @@
       <img src=screenshots/raspi_config_settings.png>
     
 20. Add `launcher.sh` to crontab
-    - Type `crontab -e` in terminal and press enter
-      
+    - Type `sudo crontab -e` in terminal and press enter (you may need to enter password)
+
+      <img src=screenshots/crontab_term.png>
+
+    - Add this line to the bottom of the file: `@reboot sh /home/davis_epi_raspi14/code/launcher.sh` (Note the # needed after `davis_epi_raspi` will vary depending on the username of the Pi)
+
       <img src=screenshots/crontab_edited.png>
-    
-21. Proceed to 'in the field setup' instructions below
+
+21. Check that video works using `variable.py`
+21. Reboot the Pi: type `reboot` in terminal and press enter
+22. Make sure the video process is running
+23. If it's working, you can proceed to 'in the field setup' instructions below
 
 ### In the field setup – per Pi 
 1.	Connect pi to monitor, keyboard, mouse, power. Connect monitor to power. [(guide)](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6)
