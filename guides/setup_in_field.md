@@ -1,12 +1,12 @@
 # In-Field Setup
 ## Setup (Per Pi)
-1.	Connect pi to monitor, keyboard, mouse, power. Connect monitor to power. [(guide)](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6)
+1.	Connect pi to monitor, keyboard, mouse, power. Connect monitor to power. [Guide](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/6)
 2.	Power on the Pi 
 3.	Open terminal and find running `continuous.py` python process and kill it [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/find_and_kill_process.md)
-4.	Use `variable.py`, `libcamera-vid`, or `libcv` to test and adjust video settings - height, autofocus, infrared etc [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/adjust_focus.md)
+4.	Use `variable.py`, `libcamera-vid`, or `libcv` to test and adjust video settings - height, autofocus, etc [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/adjust_focus.md)
 5.	Connect to hotspot or WiFi to update date + time so timestamps will be accurate [Guide](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/syncing_time.md)
 6.	Disconnect from hotspot/WiFi if prohibited during experiment
-7.	Update `continuous.py` with preferred settings (see [Code Customization]() and [Adjusting Focus]())
+7.	Update `continuous.py` with preferred settings (see [Code Customization](https://github.com/alannatodd/davis_epi_raspi/blob/main/guides/code_customization.md))
 8.	Run `reboot` in terminal and disconnect mouse + monitor
 
     <img src=screenshots/reboot.png>
